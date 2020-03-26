@@ -1,0 +1,18 @@
+<form class="ui large form segment">
+  <h3 class="ui header">添加一个链接</h3>
+  <div class="field">
+    <label for="title">标题：</label>
+    <input name="title" #newtitle>
+  </div>
+  <div class="field">
+    <label for="link">链接：</label>
+    <input name="link" #newlink>
+  </div>
+  <button (click)="addArticle(newtitle,newlink)" 
+  class="ui positive right flated button">提交链接</button>
+</form>
+
+<div class="ui grid posts">
+  <app-article></app-article>
+</div>
+
