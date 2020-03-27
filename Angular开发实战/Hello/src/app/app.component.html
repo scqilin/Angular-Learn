@@ -1,0 +1,15 @@
+<button nz-button
+  [nzType]=" 'primary' "
+  (click) = "showModal()"
+>
+  <span>模态窗组件测试</span>
+</button>
+<app-model
+ [isVisible] = "modelIsVisible"
+ title="测试标题"
+ content = "测试内容"
+ okText = "确定"
+ cancelText = "取消"
+>
+
+</app-model>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {Article} from './article.model'
 
 @Component({
@@ -10,19 +10,8 @@ import {Article} from './article.model'
   }
 })
 export class ArticleComponent implements OnInit {
-  article:Article
-  constructor() {
-    this.article = new Article(
-      'Angular 9',
-      'http://angular.io',
-      10
-    )
-
-   }
-  
-  ngOnInit(): void {
-
-  }
+  @Input() article:Article
+  @Input() iid:number
   voteUp(){
     this.article.votes += 1;
     return false
@@ -30,6 +19,34 @@ export class ArticleComponent implements OnInit {
   voteDown(){
     this.article.votes -= 1;
     return false
-  }
+  }  
+  ngOnInit(): void {
+
+  } 
 
 }
+
+// export class ArticleComponent implements OnInit {
+//   article:Article
+//   constructor() {
+//     this.article = new Article(
+//       'Angular 9',
+//       'http://angular.io',
+//       10
+//     )
+
+//    }
+  
+//   ngOnInit(): void {
+
+//   }
+//   voteUp(){
+//     this.article.votes += 1;
+//     return false
+//   }
+//   voteDown(){
+//     this.article.votes -= 1;
+//     return false
+//   }
+
+// }

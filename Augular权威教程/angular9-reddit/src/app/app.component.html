@@ -13,6 +13,14 @@
 </form>
 
 <div class="ui grid posts">
-  <app-article></app-article>
+  <app-article
+    *ngFor="let article of sorteArticles();let iid = index"
+    [article] = "article" [iid] = "iid">
+  </app-article>
 </div>
+
+<!-- <div class="ui grid posts">
+  <app-article></app-article>
+</div> -->
+
 
