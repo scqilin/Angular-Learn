@@ -1,0 +1,25 @@
+<!-- <p>slide-img works!</p> -->
+
+<div class="c-banner">
+	<div class="banner">
+		<ul>
+			<!-- <li><img src="assets/img/lunbo1.jpg"></li>
+			<li><img src="assets/img/lunbo2.jpg"></li>
+            <li><img src="assets/img/lunbo3.jpg"></li> -->
+            <li *ngFor = "let img of slideImg"><img src="{{img.img}}"></li>
+		</ul>
+	</div>
+	<div class="nexImg">
+		<img src="assets/img/nexImg.png" />
+	</div>
+	<div class="preImg">
+		<img src="assets/img/preImg.png" />
+	</div>
+	<div class="jumpBtn">
+		<ul>
+			<li jumpImg="0"></li>
+			<li jumpImg="1"></li>
+			<li jumpImg="2"></li>
+		</ul>
+	</div>
+</div>

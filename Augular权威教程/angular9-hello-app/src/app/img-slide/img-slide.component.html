@@ -1,0 +1,22 @@
+<div class="show" (mouseenter)="stopPlay()" (mouseleave)="autoPlay()">
+    <span (click)="playPre()"></span>
+    <ul [@carousel]='state' (@carousel.done)="afterPlay()">
+        <li *ngFor="let img of bannerPic"><img class="img-responsive" src="{{img.img}}"></li>
+    </ul>
+
+    <span (click)="playNext()"></span>
+
+</div>
+<div class="jumpImg">
+    <ul>
+        <li *ngFor="let img of bannerPic;let i = index">{{i}}</li>
+    </ul>
+</div>
+<div>
+    <a class="btn btn-default" href="#" role="button">Link</a>
+    <button class="btn btn-default" type="submit">Button</button>
+    <input class="btn btn-default" type="button" value="Input">
+    <input class="btn btn-default" type="submit" value="Submit">
+</div>
+<!-- <alert type="success">hello</alert> -->
+

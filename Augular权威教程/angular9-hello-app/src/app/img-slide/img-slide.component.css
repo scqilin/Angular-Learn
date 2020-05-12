@@ -1,0 +1,70 @@
+.show{
+  overflow: hidden;
+  position: relative;
+  width: 600px;
+}
+.show ul{
+  list-style: none;
+  width: 1000%;
+}
+.show li{
+    list-style: none;
+    width: 600px;
+    margin: 0;
+    height: 300px;
+    background-color: rgb(200,200,80);
+    text-align: center;
+    line-height: 300px;
+    float: left;
+    font-weight: bold;
+    font-size: 120px;
+  }
+  img{
+    width: 100%;
+  }
+
+  .show>span{
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,.4);
+    opacity: 0;
+    cursor: pointer;
+    transition: opacity .3s;
+  }
+  .show:hover>span{
+    opacity: 1;
+  }
+  .show>span:first-child{
+    left: 10px;
+    /* background-image: url("images/back.png"); */
+  }
+  .show>span:last-child{
+    right: 10px;
+    /* background-image: url("images/more.png"); */
+  }
+
+  .jumpImg{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+  }
+  .jumpImg ul{
+    margin-bottom: 0px;
+	  padding: 0px;
+  } 
+  .jumpImg ul li{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(255, 0, 0);
+    opacity: 0.9;
+    margin-left: 10px;
+  } 
