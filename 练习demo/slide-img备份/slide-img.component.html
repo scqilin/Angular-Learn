@@ -1,0 +1,19 @@
+<div style="transform: translateX(100px);">123</div>
+<div>
+    <div class="show">
+        <span></span>
+        <ul [@carousel]='state' (@carousel.done)="afterPlay()">
+            <li *ngFor="let img of bannerPic">
+                <img src={{img.img}}>
+            </li>
+        </ul>
+        <span></span>
+    </div>
+    <div class="jumpImg">
+        <ul>
+            <li class = 'jumpli' [ngClass]="{ lired: img.tag }" *ngFor="let img of imgtag" (click)="playClick(img.id)">
+                {{img.id}}
+            </li>
+        </ul>
+    </div>
+</div>

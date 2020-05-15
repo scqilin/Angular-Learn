@@ -1,11 +1,16 @@
 .show{
   overflow: hidden;
-  position: relative;
+  position: absolute;
   width: 600px;
+  height: 300px;
+}
+.showimg{
+  position: relative;
 }
 .show ul{
   list-style: none;
   width: 1000%;
+  padding-left: 0px;
 }
 .show li{
     list-style: none;
@@ -20,7 +25,9 @@
     font-size: 120px;
   }
   img{
-    width: 100%;
+    width: 600px;
+    height: 300px;
+    background-color: rgb(200,200,80);
   }
 
   .show>span{
@@ -46,7 +53,7 @@
   }
   .show>span:last-child{
     right: 10px;
-    /* background-image: url("images/more.png"); */
+    /* background-image: url("/assets/img/nexImg.png"); */
   }
 
   .jumpImg{

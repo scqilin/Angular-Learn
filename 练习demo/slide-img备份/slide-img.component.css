@@ -1,0 +1,48 @@
+.show{
+    width: 800px;
+    height: 400px;
+    /* position: absolute; */
+    overflow: hidden;
+}
+.show ul{
+    list-style: none;
+    padding-left: 0px;
+    width: 1000%;
+}
+.show li{
+    list-style: none;
+    background-color: rgb(200,200,80);
+    float: left;
+    /* width: 800px; */
+    /* margin: 0; */
+    /* height: 400px; */
+  }
+
+  .show img{
+    width: 800px;
+    height: 400px;
+  }
+
+
+  .jumpImg{
+    /* width: 100%; */
+    /* position: absolute; */
+    /* bottom: 20px; */
+    text-align: center;
+  }
+  .jumpImg ul{
+    margin-bottom: 0px;
+	  padding: 0px;
+  } 
+  .jumpli{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(52, 216, 139);
+    opacity: 0.9;
+    margin-left: 10px;
+  } 
+.lired {
+  background-color: rgb(255, 0, 0);
+}

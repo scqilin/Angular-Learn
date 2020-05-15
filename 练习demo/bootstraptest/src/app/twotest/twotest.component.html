@@ -1,0 +1,36 @@
+<p>twotest works!</p>
+<!-- <div class="show">123</div> -->
+<div class="edit-upload-wrap">
+    <div class="edit-upload" href="javascript:void(0);" href="javascript:void(0);">
+        <form #myForm id="form">
+            <input ng2FileSelect class="edit-upload-input" [uploader]="uploader" type="file" accept="image/jpg, image/png, image/jpeg, image/gif" (change)="selectedFileOnChanged($event)" />
+
+        </form>
+        <!-- <div class="edit-upload-shade">
+            点击上传
+        </div> -->
+        <button type="button" class="btn btn-default">点击上传</button>
+
+    </div>
+    <div *ngIf="!config.isshoualll" class="edit-upload-tips">
+        <span class="edit-upload-tips-icon">
+            <div class="edit-upload-tips-txt" >图片名称：{{ config.fileName || 'tingyun.png' }}</div>
+            <div class="edit-upload-tips-txt" style="color:#d9534f" *ngIf="isOver== true">上传图片不能超不能超过1024*1024</div>
+        </span>
+    </div>
+</div>
+
+<div #container style="width: 800px;height:400px">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" *ngFor="let img of imgArrs;let i = index;">
+                <img [src]=img.src alt="..." width="100%">
+            </div>
+            <!-- <div class="swiper-slide">Slide 2</div>        
+          <div class="swiper-slide">Slide 9</div>
+          <div class="swiper-slide">Slide 10</div> -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>

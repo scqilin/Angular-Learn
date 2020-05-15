@@ -26,7 +26,7 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
         marginLeft: '-1200px'
       }))),
       transition('* => moveRight', animate('500ms ease-in-out', style({
-        marginLeft: '0vw'
+        marginLeft: '0px'
       })))
     ])
   ]
@@ -34,9 +34,11 @@ import { trigger, state, animate, transition, style } from '@angular/animations'
 export class ImgSlideComponent implements OnInit {
 
   bannerPic: any[] = [
-    { img: 'assets/img/lunbo1.jpg' },
-    { img: 'assets/img/lunbo2.jpg' },
-    { img: 'assets/img/lunbo3.jpg' }
+    { img: 'assets/img/lunbo1.jpg', title: 'pic1' },
+    { img: 'assets/img/lunbo2.jpg', title: 'pic2'},
+    { img: 'assets/img/lunbo3.jpg', title: 'pic3'},
+    { img: 'assets/img/lunbo4.jpg', title: 'pic4'},
+    { img: 'assets/img/lunbo5.jpg', title: 'pic5'}
   ];
   state = 'stay';
   timer: any;
@@ -44,7 +46,7 @@ export class ImgSlideComponent implements OnInit {
     const me = this;
     this.timer = setInterval(() => {
       me.state = me.state === 'stay' ? 'moveLeft' : 'stay';
-    }, 3000);
+    }, 300000);
   }
   afterPlay(): void {
     if (this.state === 'stay' || this.state === 'moveLeft') {
