@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng10p01-reddit"
+    }
+  },
+  "defaultProject": "ng10p01-reddit",
+  "cli": {
+    "analytics": false
+  }
 }

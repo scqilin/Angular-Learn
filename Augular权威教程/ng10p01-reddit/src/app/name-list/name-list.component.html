@@ -1,0 +1,5 @@
+<div>天龙八部武力值：</div>
+<div *ngFor  = "let name of sortNamelist()">
+    <app-name-info [name]='name'></app-name-info>
+</div>
+<app-name-add [namelist]='namelist'></app-name-add>
