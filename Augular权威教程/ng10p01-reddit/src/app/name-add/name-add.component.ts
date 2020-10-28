@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import { BigHexo } from '../namelist.model';
 @Component({
   selector: 'app-name-add',
   templateUrl: './name-add.component.html',
@@ -18,10 +18,9 @@ export class NameAddComponent implements OnInit {
       if (sak === '' || sak == null || isNaN(sak) === true) {
         sak = 60;
       }
-      this.namelist.push({
-        name: name.value,
-        attack: sak
-      });
+      this.namelist.push(
+        new BigHexo(name.value, sak)
+      );
       name.value = '';
       ak.value = '';
     }

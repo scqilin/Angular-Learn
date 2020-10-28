@@ -11,13 +11,13 @@ export class NameInfoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // tslint:disable-next-line: typedef
+
   addAttack(){
-    this.name.attack ++ ;
+    this.name.addAttack();
   }
-  // tslint:disable-next-line: typedef
+
   subAttack(){
-    this.name.attack -- ;
+    this.name.subAttack();
   }
 
 }

@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { BigHexo } from '../namelist.model';
 @Component({
   selector: 'app-name-list',
   templateUrl: './name-list.component.html',
   styleUrls: ['./name-list.component.css']
 })
+
+
+
 export class NameListComponent implements OnInit {
+  // @Input() bighexo: BigHexo;
   namelist = [
-    {name: '乔峰', attack: 98},
-    {name: '段誉', attack: 97},
-    {name: '天山童姥', attack: 105}
+    new BigHexo('乔峰', 98),
+    new BigHexo('段誉', 97),
+    new BigHexo('天山童姥', 105),
+    new BigHexo('虚竹', 97)
   ];
   constructor() { }
 
