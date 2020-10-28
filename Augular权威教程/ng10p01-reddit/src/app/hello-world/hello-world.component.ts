@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelloWorldComponent implements OnInit {
   name = 'qilin';
+  binfo: string;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  giveme(message: string){
+    console.log(message);
+    this.binfo = message;
   }
 
 }
