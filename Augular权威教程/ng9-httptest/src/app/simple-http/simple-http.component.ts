@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-simple-http',
@@ -8,8 +8,9 @@ import { HttpClient } from "@angular/common/http";
 })
 export class SimpleHttpComponent implements OnInit {
   loading = true;
+  // tslint:disable-next-line: ban-types
   data: Object;
- 
+
   constructor(private http: HttpClient) {
 
   }
@@ -19,11 +20,11 @@ export class SimpleHttpComponent implements OnInit {
 // http://jsonplaceholder.typicode.com/posts/1
 
   makeRequest() {
-    this.http.get('http://jsonplaceholder.typicode.com/posts/1') 
-    .subscribe((res:Response)=>{
+    this.http.get('http://jsonplaceholder.typicode.com/posts/1')
+    .subscribe((res: Response) => {
       console.log('res :>> ', res);
       this.data = res;
       this.loading = false;
-    })
+    });
   }
 }

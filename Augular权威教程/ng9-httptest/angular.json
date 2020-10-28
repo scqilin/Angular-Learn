@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ng9-httptest"
+    }
+  },
+  "defaultProject": "ng9-httptest",
+  "cli": {
+    "analytics": false
+  }
 }
